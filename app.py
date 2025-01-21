@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 from fpdf import FPDF
 import tempfile
-from src.file_reader import file_reader
 
 matplotlib.use("agg")
 
@@ -75,7 +74,8 @@ def generate_pdf_with_graphs(dataframe, graphs):
         pdf.add_page()
         pdf.image(graph_path, x=10, y=30, w=190)
 
-    pdf_output = pdf.output(dest='S').encode('latin1')
+    # Retourne le PDF en tant que bytearray
+    pdf_output = pdf.output(dest='S').encode('latin1') if isinstance(pdf.output(dest='S'), str) else pdf.output(dest='S')
     return BytesIO(pdf_output)
 
 # Fonction pour sauvegarder un graphique temporairement
