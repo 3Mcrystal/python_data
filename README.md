@@ -6,8 +6,8 @@ This project provides tools to analyze and visualize COVID-19 data using Streaml
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/Lykkss/projet_python.git
-    cd projet_python
+    git clone git@github.com:3Mcrystal/python_data.git
+    cd python_data
     ```
 
 2. Create and activate a virtual environment:
@@ -29,8 +29,7 @@ streamlit run app.py
 ```
 
 ## Deploy Project 
-
-https://lykkss-projet-python-app-sczaoz.streamlit.app/
+https://pythondata-tzr8jen4gvxr3fvahlwurq.streamlit.app/
 
 ## Diagram
 
